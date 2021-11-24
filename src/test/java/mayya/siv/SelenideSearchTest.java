@@ -10,14 +10,11 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideSearchTest {
 
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = "1440x900";
-}
-
     @Test
 
     void checkSoftAssertionsPage() {
+
+        Configuration.browserSize = "1440x900";
 
 //        Открыть страницу Selenide в Github
         open("https://github.com/");
@@ -33,7 +30,5 @@ public class SelenideSearchTest {
 
 //        Проверить что внутри есть пример кода для JUnit5
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class"));
-
-        sleep(5000);
     }
 }
