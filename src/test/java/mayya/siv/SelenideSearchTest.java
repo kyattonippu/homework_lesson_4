@@ -19,7 +19,7 @@ public class SelenideSearchTest {
 //        Открыть страницу Selenide в Github
         open("https://github.com/");
         $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
-        $$("ul.repo-list li").first().$("a").click();
+        $("ul.repo-list li").$("a").click();
 
 //        Перейти в раздел Wiki проекта
         $("#wiki-tab").click();
